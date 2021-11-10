@@ -1,0 +1,1 @@
+Para manejar la modificación del AppConfig, se debe de agrtegar la referencia al proyecto "System.Config"
