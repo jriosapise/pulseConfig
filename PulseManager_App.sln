@@ -1,0 +1,34 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.6.33815.320
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "PulseManager", "PulseManager.vbproj", "{99EC4585-582E-41F4-9C91-9A685138AE33}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		CD_ROM|Any CPU = CD_ROM|Any CPU
+		Debug|Any CPU = Debug|Any CPU
+		DVD-5|Any CPU = DVD-5|Any CPU
+		Release|Any CPU = Release|Any CPU
+		SingleImage|Any CPU = SingleImage|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{99EC4585-582E-41F4-9C91-9A685138AE33}.CD_ROM|Any CPU.ActiveCfg = Release|Any CPU
+		{99EC4585-582E-41F4-9C91-9A685138AE33}.CD_ROM|Any CPU.Build.0 = Release|Any CPU
+		{99EC4585-582E-41F4-9C91-9A685138AE33}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{99EC4585-582E-41F4-9C91-9A685138AE33}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{99EC4585-582E-41F4-9C91-9A685138AE33}.DVD-5|Any CPU.ActiveCfg = Debug|Any CPU
+		{99EC4585-582E-41F4-9C91-9A685138AE33}.DVD-5|Any CPU.Build.0 = Debug|Any CPU
+		{99EC4585-582E-41F4-9C91-9A685138AE33}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{99EC4585-582E-41F4-9C91-9A685138AE33}.Release|Any CPU.Build.0 = Release|Any CPU
+		{99EC4585-582E-41F4-9C91-9A685138AE33}.SingleImage|Any CPU.ActiveCfg = Release|Any CPU
+		{99EC4585-582E-41F4-9C91-9A685138AE33}.SingleImage|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {802E8E5A-1A47-4EAC-9051-6A6D06291D7E}
+	EndGlobalSection
+EndGlobal

@@ -24,7 +24,7 @@ Public Class Login
         pass = tPassword.Text
         'tPassword.Text Then
         Try
-            dts = qry.SelToGridWhere("usr_Id,usr_password,usr_Name,fk_id_Rol,usr_LastName,usr_Foto", "tab_SystUsuarios", "usr_login='" & tUserName.Text & "' and usr_Active='TRUE'")
+            dts = qry.SelToGridWhere("usr_Id,usr_password,usr_Name,fk_id_Rol,usr_LastName,usr_Foto", "a_SystUsuarios", "usr_login='" & tUserName.Text & "' and usr_Active='TRUE'")
             If dts.Tables(0).Rows.Count > 0 Then
                 For Each row As DataRow In dts.Tables(0).Rows
                     pass = row("usr_password")
@@ -102,7 +102,7 @@ Public Class Login
     Public Sub crearLog(fecha As Date, modulo As String, accion As String, codigo As String, detalle As String)
         Dim insertar As New Consulta 'variable para hacer el query a la database
         Try
-            insertar.InsertarDatos("log_Date,log_User,log_Module,log_Action,log_Code,log_Detail", "" & _
+            insertar.InsertarDatos("log_Date,log_User,log_Module,log_Action,log_Code,log_Detail", "" &
             "'" & fecha & "','LOGIN','" & modulo & "','" & accion & "','" & codigo & "','" & detalle.Replace("'", "''") & "'", "sist_Log")
         Catch ex As Exception
 
@@ -119,6 +119,10 @@ Public Class Login
             tUserName.Focus()
 
         End If
+    End Sub
+
+    Private Sub Label2_Click(sender As Object, e As EventArgs) Handles Label2.Click
+
     End Sub
 
     Public Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
@@ -151,19 +155,4 @@ Public Class Login
         End If
     End Sub
 
-    Private Sub Button4_Click(sender As Object, e As EventArgs) Handles Button4.Click
-        MsgBox("GESTIÓN DE ETIQUETAS REV. 0.0.1 - 2021.01.27")
-    End Sub
-
-    Private Sub Button3_Click(sender As Object, e As EventArgs) Handles Button3.Click
-        Try
-            Dim _qry As New Consulta
-
-            _qry.ActulizarGral("[sga.tab_Etiquetas]", "lbl_consecutivo='768'", "lbl_id=636")
-
-            Button3.Text = "ok"
-        Catch ex As Exception
-            MsgBox("Error al actualizar ultimo consecutivo de primera carga. " & ex.Message)
-        End Try
-    End Sub
 End Class

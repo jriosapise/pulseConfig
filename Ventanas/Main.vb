@@ -20,24 +20,17 @@ Public Class Main
     Private Sub Main_Load(sender As Object, e As EventArgs) Handles Me.Load
         Guna.UI.Lib.GraphicsHelper.ShadowForm(Me)
         Guna.UI.Lib.GraphicsHelper.DrawLineShadow(GunaPanel5, Color.Black, 20, 5, Guna.UI.WinForms.VerHorAlign.HoriziontalTop)
-        list_Labels.Show()
+
     End Sub
 
-    Private Sub GunaAdvenceButton2_Click(sender As Object, e As EventArgs) Handles GunaAdvenceButton2.Click
-        ctgDivision.Show()
-    End Sub
 
     Private Sub GunaAdvenceButton1_Click(sender As Object, e As EventArgs) Handles GunaAdvenceButton1.Click
-        list_Labels.Show()
+        Tolerancias.Show()
     End Sub
 
-    Private Sub GunaAdvenceButton3_Click(sender As Object, e As EventArgs) Handles GunaAdvenceButton3.Click
-        ctgFabricante.Show()
-    End Sub
 
-    Private Sub GunaAdvenceButton4_Click(sender As Object, e As EventArgs) Handles GunaAdvenceButton4.Click
-        frmusuarios.Show()
-    End Sub
+
+
 
     Private Sub GunaAdvenceButton5_Click(sender As Object, e As EventArgs) Handles GunaAdvenceButton5.Click
         'Me.Close()
@@ -57,11 +50,11 @@ Public Class Main
         End If
     End Sub
 
-    Private Sub GunaAdvenceButton6_Click(sender As Object, e As EventArgs) Handles GunaAdvenceButton6.Click
-        PrintOut_Log.Show()
+    Private Sub GunaAdvenceButton7_Click(sender As Object, e As EventArgs) Handles GunaAdvenceButton7.Click
+        ListasDistribucion.Show()
     End Sub
 
-    Private Sub GunaAdvenceButton7_Click(sender As Object, e As EventArgs) Handles GunaAdvenceButton7.Click
-        Notificaciones.Show()
+    Private Sub GunaAdvenceButton6_Click(sender As Object, e As EventArgs) Handles GunaAdvenceButton6.Click
+        PrintOut_Log.Show()
     End Sub
 End Class

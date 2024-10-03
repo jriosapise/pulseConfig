@@ -25,17 +25,17 @@ Partial Class PrintOut_Log
         Me.GunaPanel1 = New Guna.UI.WinForms.GunaPanel()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.GunaPanel2 = New Guna.UI.WinForms.GunaPanel()
+        Me.fecha2 = New Guna.UI.WinForms.GunaDateTimePicker()
+        Me.fecha1 = New Guna.UI.WinForms.GunaDateTimePicker()
+        Me.gbFiltrar = New Guna.UI.WinForms.GunaButton()
+        Me.gbLimpiar = New Guna.UI.WinForms.GunaButton()
         Me.Label6 = New System.Windows.Forms.Label()
         Me.lblTotal = New System.Windows.Forms.Label()
         Me.Label11 = New System.Windows.Forms.Label()
         Me.Label13 = New System.Windows.Forms.Label()
-        Me.gbFiltrar = New Guna.UI.WinForms.GunaButton()
-        Me.gbLimpiar = New Guna.UI.WinForms.GunaButton()
         Me.Panel3 = New System.Windows.Forms.Panel()
         Me.dgvBitacora = New System.Windows.Forms.DataGridView()
         Me.Panel2 = New System.Windows.Forms.Panel()
-        Me.fecha1 = New Guna.UI.WinForms.GunaDateTimePicker()
-        Me.fecha2 = New Guna.UI.WinForms.GunaDateTimePicker()
         Me.GunaPanel1.SuspendLayout()
         Me.GunaPanel2.SuspendLayout()
         Me.Panel3.SuspendLayout()
@@ -59,9 +59,9 @@ Partial Class PrintOut_Log
         Me.Label1.ForeColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
         Me.Label1.Location = New System.Drawing.Point(24, 9)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(383, 31)
+        Me.Label1.Size = New System.Drawing.Size(358, 31)
         Me.Label1.TabIndex = 10
-        Me.Label1.Text = "REGISTRO DE IMPRESIÓN"
+        Me.Label1.Text = "REGISTRO DE EVENTOS"
         '
         'GunaPanel2
         '
@@ -79,49 +79,51 @@ Partial Class PrintOut_Log
         Me.GunaPanel2.Size = New System.Drawing.Size(877, 107)
         Me.GunaPanel2.TabIndex = 41
         '
-        'Label6
+        'fecha2
         '
-        Me.Label6.AutoSize = True
-        Me.Label6.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Bold)
-        Me.Label6.Location = New System.Drawing.Point(239, 60)
-        Me.Label6.Name = "Label6"
-        Me.Label6.RightToLeft = System.Windows.Forms.RightToLeft.No
-        Me.Label6.Size = New System.Drawing.Size(53, 17)
-        Me.Label6.TabIndex = 36
-        Me.Label6.Text = "hasta:"
+        Me.fecha2.BaseColor = System.Drawing.Color.White
+        Me.fecha2.BorderColor = System.Drawing.Color.Silver
+        Me.fecha2.CustomFormat = Nothing
+        Me.fecha2.DropDownAlign = System.Windows.Forms.LeftRightAlignment.Right
+        Me.fecha2.FocusedColor = System.Drawing.Color.FromArgb(CType(CType(100, Byte), Integer), CType(CType(88, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.fecha2.Font = New System.Drawing.Font("Segoe UI", 9.0!)
+        Me.fecha2.ForeColor = System.Drawing.Color.Black
+        Me.fecha2.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
+        Me.fecha2.Location = New System.Drawing.Point(298, 54)
+        Me.fecha2.MaxDate = New Date(9998, 12, 31, 0, 0, 0, 0)
+        Me.fecha2.MinDate = New Date(1753, 1, 1, 0, 0, 0, 0)
+        Me.fecha2.Name = "fecha2"
+        Me.fecha2.OnHoverBaseColor = System.Drawing.Color.White
+        Me.fecha2.OnHoverBorderColor = System.Drawing.Color.FromArgb(CType(CType(100, Byte), Integer), CType(CType(88, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.fecha2.OnHoverForeColor = System.Drawing.Color.FromArgb(CType(CType(100, Byte), Integer), CType(CType(88, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.fecha2.OnPressedColor = System.Drawing.Color.Black
+        Me.fecha2.Size = New System.Drawing.Size(118, 32)
+        Me.fecha2.TabIndex = 43
+        Me.fecha2.Text = "3/26/2021"
+        Me.fecha2.Value = New Date(2021, 3, 26, 2, 22, 44, 424)
         '
-        'lblTotal
+        'fecha1
         '
-        Me.lblTotal.AutoSize = True
-        Me.lblTotal.Font = New System.Drawing.Font("Microsoft Sans Serif", 20.0!, System.Drawing.FontStyle.Bold)
-        Me.lblTotal.ForeColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
-        Me.lblTotal.Location = New System.Drawing.Point(403, 9)
-        Me.lblTotal.Name = "lblTotal"
-        Me.lblTotal.Size = New System.Drawing.Size(50, 31)
-        Me.lblTotal.TabIndex = 12
-        Me.lblTotal.Text = "(0)"
-        '
-        'Label11
-        '
-        Me.Label11.AutoSize = True
-        Me.Label11.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Bold)
-        Me.Label11.Location = New System.Drawing.Point(44, 60)
-        Me.Label11.Name = "Label11"
-        Me.Label11.RightToLeft = System.Windows.Forms.RightToLeft.No
-        Me.Label11.Size = New System.Drawing.Size(59, 17)
-        Me.Label11.TabIndex = 30
-        Me.Label11.Text = "Desde:"
-        '
-        'Label13
-        '
-        Me.Label13.AutoSize = True
-        Me.Label13.Font = New System.Drawing.Font("Microsoft Sans Serif", 20.0!, System.Drawing.FontStyle.Bold)
-        Me.Label13.ForeColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
-        Me.Label13.Location = New System.Drawing.Point(24, 9)
-        Me.Label13.Name = "Label13"
-        Me.Label13.Size = New System.Drawing.Size(358, 31)
-        Me.Label13.TabIndex = 10
-        Me.Label13.Text = "LISTADO DE ETIQUETAS"
+        Me.fecha1.BaseColor = System.Drawing.Color.White
+        Me.fecha1.BorderColor = System.Drawing.Color.Silver
+        Me.fecha1.CustomFormat = Nothing
+        Me.fecha1.DropDownAlign = System.Windows.Forms.LeftRightAlignment.Right
+        Me.fecha1.FocusedColor = System.Drawing.Color.FromArgb(CType(CType(100, Byte), Integer), CType(CType(88, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.fecha1.Font = New System.Drawing.Font("Segoe UI", 9.0!)
+        Me.fecha1.ForeColor = System.Drawing.Color.Black
+        Me.fecha1.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
+        Me.fecha1.Location = New System.Drawing.Point(109, 54)
+        Me.fecha1.MaxDate = New Date(9998, 12, 31, 0, 0, 0, 0)
+        Me.fecha1.MinDate = New Date(1753, 1, 1, 0, 0, 0, 0)
+        Me.fecha1.Name = "fecha1"
+        Me.fecha1.OnHoverBaseColor = System.Drawing.Color.White
+        Me.fecha1.OnHoverBorderColor = System.Drawing.Color.FromArgb(CType(CType(100, Byte), Integer), CType(CType(88, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.fecha1.OnHoverForeColor = System.Drawing.Color.FromArgb(CType(CType(100, Byte), Integer), CType(CType(88, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.fecha1.OnPressedColor = System.Drawing.Color.Black
+        Me.fecha1.Size = New System.Drawing.Size(118, 32)
+        Me.fecha1.TabIndex = 42
+        Me.fecha1.Text = "1/1/2021"
+        Me.fecha1.Value = New Date(2021, 1, 1, 0, 0, 0, 0)
         '
         'gbFiltrar
         '
@@ -175,6 +177,50 @@ Partial Class PrintOut_Log
         Me.gbLimpiar.Text = "LIMPIAR"
         Me.gbLimpiar.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
+        'Label6
+        '
+        Me.Label6.AutoSize = True
+        Me.Label6.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Bold)
+        Me.Label6.Location = New System.Drawing.Point(239, 60)
+        Me.Label6.Name = "Label6"
+        Me.Label6.RightToLeft = System.Windows.Forms.RightToLeft.No
+        Me.Label6.Size = New System.Drawing.Size(53, 17)
+        Me.Label6.TabIndex = 36
+        Me.Label6.Text = "hasta:"
+        '
+        'lblTotal
+        '
+        Me.lblTotal.AutoSize = True
+        Me.lblTotal.Font = New System.Drawing.Font("Microsoft Sans Serif", 20.0!, System.Drawing.FontStyle.Bold)
+        Me.lblTotal.ForeColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
+        Me.lblTotal.Location = New System.Drawing.Point(403, 9)
+        Me.lblTotal.Name = "lblTotal"
+        Me.lblTotal.Size = New System.Drawing.Size(50, 31)
+        Me.lblTotal.TabIndex = 12
+        Me.lblTotal.Text = "(0)"
+        '
+        'Label11
+        '
+        Me.Label11.AutoSize = True
+        Me.Label11.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Bold)
+        Me.Label11.Location = New System.Drawing.Point(44, 60)
+        Me.Label11.Name = "Label11"
+        Me.Label11.RightToLeft = System.Windows.Forms.RightToLeft.No
+        Me.Label11.Size = New System.Drawing.Size(59, 17)
+        Me.Label11.TabIndex = 30
+        Me.Label11.Text = "Desde:"
+        '
+        'Label13
+        '
+        Me.Label13.AutoSize = True
+        Me.Label13.Font = New System.Drawing.Font("Microsoft Sans Serif", 20.0!, System.Drawing.FontStyle.Bold)
+        Me.Label13.ForeColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
+        Me.Label13.Location = New System.Drawing.Point(24, 9)
+        Me.Label13.Name = "Label13"
+        Me.Label13.Size = New System.Drawing.Size(358, 31)
+        Me.Label13.TabIndex = 10
+        Me.Label13.Text = "LISTADO DE ETIQUETAS"
+        '
         'Panel3
         '
         Me.Panel3.Controls.Add(Me.dgvBitacora)
@@ -208,52 +254,6 @@ Partial Class PrintOut_Log
         Me.Panel2.Size = New System.Drawing.Size(877, 36)
         Me.Panel2.TabIndex = 19
         '
-        'fecha1
-        '
-        Me.fecha1.BaseColor = System.Drawing.Color.White
-        Me.fecha1.BorderColor = System.Drawing.Color.Silver
-        Me.fecha1.CustomFormat = Nothing
-        Me.fecha1.DropDownAlign = System.Windows.Forms.LeftRightAlignment.Right
-        Me.fecha1.FocusedColor = System.Drawing.Color.FromArgb(CType(CType(100, Byte), Integer), CType(CType(88, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.fecha1.Font = New System.Drawing.Font("Segoe UI", 9.0!)
-        Me.fecha1.ForeColor = System.Drawing.Color.Black
-        Me.fecha1.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
-        Me.fecha1.Location = New System.Drawing.Point(109, 54)
-        Me.fecha1.MaxDate = New Date(9998, 12, 31, 0, 0, 0, 0)
-        Me.fecha1.MinDate = New Date(1753, 1, 1, 0, 0, 0, 0)
-        Me.fecha1.Name = "fecha1"
-        Me.fecha1.OnHoverBaseColor = System.Drawing.Color.White
-        Me.fecha1.OnHoverBorderColor = System.Drawing.Color.FromArgb(CType(CType(100, Byte), Integer), CType(CType(88, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.fecha1.OnHoverForeColor = System.Drawing.Color.FromArgb(CType(CType(100, Byte), Integer), CType(CType(88, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.fecha1.OnPressedColor = System.Drawing.Color.Black
-        Me.fecha1.Size = New System.Drawing.Size(118, 32)
-        Me.fecha1.TabIndex = 42
-        Me.fecha1.Text = "1/1/2021"
-        Me.fecha1.Value = New Date(2021, 1, 1, 0, 0, 0, 0)
-        '
-        'fecha2
-        '
-        Me.fecha2.BaseColor = System.Drawing.Color.White
-        Me.fecha2.BorderColor = System.Drawing.Color.Silver
-        Me.fecha2.CustomFormat = Nothing
-        Me.fecha2.DropDownAlign = System.Windows.Forms.LeftRightAlignment.Right
-        Me.fecha2.FocusedColor = System.Drawing.Color.FromArgb(CType(CType(100, Byte), Integer), CType(CType(88, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.fecha2.Font = New System.Drawing.Font("Segoe UI", 9.0!)
-        Me.fecha2.ForeColor = System.Drawing.Color.Black
-        Me.fecha2.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
-        Me.fecha2.Location = New System.Drawing.Point(298, 54)
-        Me.fecha2.MaxDate = New Date(9998, 12, 31, 0, 0, 0, 0)
-        Me.fecha2.MinDate = New Date(1753, 1, 1, 0, 0, 0, 0)
-        Me.fecha2.Name = "fecha2"
-        Me.fecha2.OnHoverBaseColor = System.Drawing.Color.White
-        Me.fecha2.OnHoverBorderColor = System.Drawing.Color.FromArgb(CType(CType(100, Byte), Integer), CType(CType(88, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.fecha2.OnHoverForeColor = System.Drawing.Color.FromArgb(CType(CType(100, Byte), Integer), CType(CType(88, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.fecha2.OnPressedColor = System.Drawing.Color.Black
-        Me.fecha2.Size = New System.Drawing.Size(118, 32)
-        Me.fecha2.TabIndex = 43
-        Me.fecha2.Text = "3/26/2021"
-        Me.fecha2.Value = New Date(2021, 3, 26, 2, 22, 44, 424)
-        '
         'PrintOut_Log
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -263,7 +263,7 @@ Partial Class PrintOut_Log
         Me.Controls.Add(Me.Panel3)
         Me.Controls.Add(Me.GunaPanel1)
         Me.Name = "PrintOut_Log"
-        Me.Text = "PrintOut_Log"
+        Me.Text = "Event_Log"
         Me.GunaPanel1.ResumeLayout(False)
         Me.GunaPanel1.PerformLayout()
         Me.GunaPanel2.ResumeLayout(False)

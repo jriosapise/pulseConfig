@@ -25,7 +25,7 @@ Public Class LogsdeSistema
                 CultureInfo.CreateSpecificCulture("en-US")))
             Dim _qry As New Consulta
 
-            _qry.InsertarDatos("sesion_creada,sesion_usuario,fk_id_usuario", "'" & hoy & "','" & usrName & "','" & usrId & "'", "tab_SystSesiones")
+            _qry.InsertarDatos("sesion_creada,sesion_usuario,fk_id_usuario", "'" & hoy & "','" & usrName & "','" & usrId & "'", "a_SystSesiones")
         Catch ex As Exception
             Throw
         End Try
@@ -33,7 +33,7 @@ Public Class LogsdeSistema
     Public Sub eliminarSesion(usrId As Integer)
         Try
             Dim _qry As New Consulta
-            _qry.EliminarDatos("tab_SystSesiones", "fk_id_usuario=" & usrId)
+            _qry.EliminarDatos("a_SystSesiones", "fk_id_usuario=" & usrId)
         Catch ex As Exception
             Throw
         End Try
